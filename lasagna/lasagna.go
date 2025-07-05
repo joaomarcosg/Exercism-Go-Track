@@ -1,9 +1,9 @@
 package lasagna
 
-const ovenTime = 40
+const OvenTime = 40
 
 func RemaningOvenTime(actualMinutesInOven int) int {
-	return ovenTime - actualMinutesInOven
+	return OvenTime - actualMinutesInOven
 }
 
 func PreparationTime(numberOfLayers int) int {
