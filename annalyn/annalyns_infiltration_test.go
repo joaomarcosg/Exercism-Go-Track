@@ -15,7 +15,7 @@ func TestCanSignalPrisoner(t *testing.T) {
 		expected:        false,
 	}
 
-	if got := CanSignalPrisioner(tt.archerIsAwake, tt.prisonerIsAwake); got != tt.expected {
+	if got := CanSignalPrisoner(tt.archerIsAwake, tt.prisonerIsAwake); got != tt.expected {
 		t.Errorf("CanSignalPrisoner(%v, %v) = %v; want %v", tt.archerIsAwake, tt.prisonerIsAwake, got, tt.expected)
 	}
 }
