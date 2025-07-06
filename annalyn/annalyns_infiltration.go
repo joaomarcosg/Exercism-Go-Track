@@ -12,12 +12,12 @@ func CanSpy(knightIsAwake, archerIsAwake, prisonerIsAwake bool) bool {
 	return false
 }
 
-func CanSignalPrisioner(archerIsAwake, prisonerIsAwake bool) bool {
-	if archerIsAwake && prisonerIsAwake {
-		return false
+func CanSignalPrisoner(archerIsAwake, prisonerIsAwake bool) bool {
+	if !archerIsAwake && prisonerIsAwake {
+		return true
 	}
 
-	return true
+	return false
 }
 
 func CanFreePrisionar(knightIsAwake, archerIsAwake, prisonerIsAwake, petDogIsPresent bool) bool {
