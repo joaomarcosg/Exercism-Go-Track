@@ -4,13 +4,22 @@ import (
 	"testing"
 )
 
-func TestWelcome(t *testing.T) {
-	expected := "Welcome to my party Christiane"
-	got := Welcome("Christiane")
+type Struct struct {
+	name string
+	want string
+}
 
-	if got != expected {
-		t.Errorf("Welcome() = %s, want %s", got, expected)
+func TestWelcome(t *testing.T) {
+
+	tt := Struct{
+		name: "Chihiro",
+		want: "Welcome to my party, Chihiro!",
 	}
+
+	if got := Welcome(tt.name); got != tt.want {
+		t.Errorf("Welcome(%s) = %s, want %s", tt.name, got, tt.want)
+	}
+
 }
 
 func TestHappyBirthday(t *testing.T) {
