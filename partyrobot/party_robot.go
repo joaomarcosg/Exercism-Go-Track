@@ -1,5 +1,7 @@
 package partyrobot
 
+import "fmt"
+
 func Welcome(name string) string {
-	return name
+	return fmt.Sprint("Welcome to my party %s", name)
 }
