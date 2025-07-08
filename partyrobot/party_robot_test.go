@@ -1,12 +1,14 @@
 package partyrobot
 
-import "testing"
+import (
+	"testing"
+)
 
 func TestWelcome(t *testing.T) {
-	expected := "Christiane"
+	expected := "Welcome to my party Christiane"
 	got := Welcome("Christiane")
 
 	if got != expected {
-		t.Errorf("Welcome() = %q; want %q", got, expected)
+		t.Errorf("Welcome() = %s, want %s", got, expected)
 	}
 }
